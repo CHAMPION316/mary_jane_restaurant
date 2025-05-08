@@ -11,3 +11,14 @@
 .p-line-space {
     line-height: 1.8;
 }
+
+.book-table-btn {
+    background-color: #e07ebf !important; /* Custom pink */
+    color: #fff !important;
+    border: none !important;
+    transition: background 0.3s;
+}
+.book-table-btn:hover, .book-table-btn:focus {
+    background-color: #b85f99 !important; /* Darker pink on hover */
+    color: #fff !important;
+}
