@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import '../styles/Home.css';
 
 // Import image from assets folder
 import frontPage from '../assets/images/front-page.jpg';
 
 const Home = () => {
   return (
-    <div className="bg-light">
+    <div className="home-bg-color">
       {/* Hero Section with Front Cover Image */}
       <div
         className="text-center py-5 bg-dark text-white"
@@ -19,10 +20,22 @@ const Home = () => {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
+          position: 'relative',
         }}
       >
-        <Container>
+        {/* Dark overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+          }}
+        />
+        <Container style={{ position: 'relative', zIndex: 1 }}>
           <h1 className="display-4">Welcome to The Mary Jane</h1>
           <p className="lead">A fine dining experience awaits you.</p>
           <Button as={Link} to="/bookings" variant="primary" size="lg">
@@ -32,21 +45,29 @@ const Home = () => {
       </div>
 
       {/* About Section */}
-      <Container className="my-5">
-        <Row>
-          <Col md={6}>
-            <h2>About Us</h2>
-            <p>
-              The Mary Jane offers an exquisite fine dining experience with a focus on fresh, locally sourced ingredients. Join us for an unforgettable meal, available for reservations at 4:00 PM, 6:00 PM, 8:00 PM, or 10:00 PM.
-            </p>
-          </Col>
-          <Col md={6}>
-            <h2>Our Specialties</h2>
-            <p>
-              From grilled salmon to truffle pasta, our menu is crafted to delight your senses. Explore our offerings and reserve your table today.
-            </p>
-          </Col>
-        </Row>
+      <Container>
+        <div className="pt-3 text-center text-light both-padding">
+          <h3 className="pb-2">What makes us special?</h3>
+          <p className='p-line-space'>
+            Nestled in the heart of SoHo, NYC, Mary Jane invites you to savor the artistry of fine Italian dining. 
+            Our menu celebrates time-honored Italian dishes, crafted with the freshest ingredients and paired with 
+            an exquisite selection of wines from renowned vineyards. In an elegant yet welcoming atmosphere, 
+            every bite and sip tells a story of tradition and passion. Whether you're seeking a romantic evening 
+            or a memorable gathering, Mary Jane promises an unforgettable culinary journey.
+          </p>
+        </div>
+        <div>
+          <Row>
+            <Col md={6} className="split-col text-center">
+              {/* <Image
+
+              /> */}
+            </Col>
+            <Col md={6} className="split-col text-center"></Col>
+          </Row>
+        </div>
+        <footer className="pb-1 text-center text-light">
+        </footer>
       </Container>
     </div>
   );

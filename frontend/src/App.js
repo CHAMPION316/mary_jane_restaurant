@@ -6,6 +6,7 @@ import Menu from './pages/Menu';
 import Bookings from './pages/Bookings';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import './App.css';
 
 function App() {
   return (
