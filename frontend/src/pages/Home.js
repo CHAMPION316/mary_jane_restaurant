@@ -5,6 +5,9 @@ import '../styles/Home.css';
 
 // Import image from assets folder
 import frontPage from '../assets/images/front-page.jpg';
+import wineGlass from '../assets/images/wine-glass.jpg';
+import pastaDish from '../assets/images/pasta.jpg';
+import ovenPizza from '../assets/images/oven-pizza2.jpg';
 
 const Home = () => {
   return (
@@ -56,14 +59,17 @@ const Home = () => {
             or a memorable gathering, Mary Jane promises an unforgettable culinary journey.
           </p>
         </div>
-        <div>
+        <div className="pt-4">
           <Row>
-            <Col md={6} className="split-col text-center">
-              {/* <Image
-                source={{}}
-              /> */}
+            <Col md={4} className="split-col text-center">
+              <img src={ovenPizza} alt="Oven Pizza" style={{maxWidth: '75%', height: 'auto', borderRadius: '8px'}} />
             </Col>
-            <Col md={6} className="split-col text-center"></Col>
+            <Col md={4} className="split-col text-center">
+              <img src={wineGlass} alt="Wine glass" style={{ maxWidth: '80%', height: 'auto', borderRadius: '8px' }} />
+            </Col>
+            <Col md={4} className="split-col text-center">
+              <img src={pastaDish} alt="Cooking Pasta" style={{maxWidth: '80%', height: 'auto', borderRadius: '8px'}} />
+            </Col>
           </Row>
         </div>
         <footer className="pb-1 text-center text-light">
