@@ -38,7 +38,7 @@ const Home = () => {
         <Container style={{ position: 'relative', zIndex: 1 }}>
           <h1 className="display-4">Welcome to The Mary Jane</h1>
           <p className="lead">A fine dining experience awaits you.</p>
-          <Button as={Link} to="/bookings" variant="primary" size="lg">
+          <Button as={Link} to="/bookings" variant="primary" size="lg" className="book-table-btn">
             Book a Table
           </Button>
         </Container>
