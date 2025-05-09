@@ -60,7 +60,7 @@ const Home = () => {
           <Row>
             <Col md={6} className="split-col text-center">
               {/* <Image
-
+                source={{}}
               /> */}
             </Col>
             <Col md={6} className="split-col text-center"></Col>
