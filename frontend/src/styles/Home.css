@@ -22,3 +22,14 @@
     background-color: #b85f99 !important; /* Darker pink on hover */
     color: #fff !important;
 }
+
+/* Add vertical padding for images on mobile */
+@media (max-width: 768px) {
+    .split-col {
+        margin-bottom: 2rem;
+    }
+    
+    .split-col img {
+        margin-bottom: 1rem;
+    }
+}
