@@ -101,7 +101,7 @@ const Home = () => {
                 <p className="mb-2">+1 (212) 555-0123</p>
                 <div className="social-icons">
                   <a href="#" className="text-light me-3"><i className="fab fa-x-twitter"></i></a>
-                  <a href="#" className="text-light me-3"><i className="fab fa-instagram"></i></a>
+                  <a href="#" className="text-light me-3"><i className="fa-regular fa-bell"></i></a>
                   <a href="#" className="text-light"><i className="fab fa-facebook"></i></a>
                 </div>
               </div>
