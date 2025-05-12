@@ -8,6 +8,7 @@ import frontPage from '../assets/images/front-page.jpg';
 import wineGlass from '../assets/images/wine-glass.jpg';
 import pastaDish from '../assets/images/pasta.jpg';
 import ovenPizza from '../assets/images/oven-pizza2.jpg';
+import theMenu from '../assets/images/menu.jpg';
 
 const Home = () => {
   return (
@@ -72,9 +73,22 @@ const Home = () => {
             </Col>
           </Row>
         </div>
-        <footer className="pb-1 text-center text-light">
-        </footer>
       </Container>
+      {/* <div className="menu-bg-color text-center px-1">
+          <h2 className="text-white">Menu</h2>
+          <Row>
+            <Col md={5} className="split-col">
+            <img src={theMenu} alt="Menu on a table" style={{maxWidth: '40%', height: 'auto', borderRadius: '8px'}} />
+            </Col>
+            <Col md={7} className="split-col">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            </p>
+            </Col>
+          </Row>
+      </div>
+      <footer className="pb-1 text-center text-light">    
+      </footer> */}
     </div>
   );
 };

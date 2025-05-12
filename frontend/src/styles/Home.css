@@ -13,7 +13,7 @@
 }
 
 .book-table-btn {
-    background-color: #78133c !important; /* Custom pink */
+    background-color: #78133c !important; /* Custom wine */
     color: #fff !important;
     border: none !important;
     transition: background 0.3s;
@@ -22,3 +22,7 @@
     background-color: #b85f99 !important; /* Darker pink on hover */
     color: #fff !important;
 }
+
+/* .menu-bg-color {
+    background-color: black;
+} */
