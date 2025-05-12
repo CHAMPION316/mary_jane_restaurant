@@ -74,21 +74,25 @@ const Home = () => {
           </Row>
         </div>
       </Container>
-      {/* <div className="menu-bg-color text-center px-1">
-          <h2 className="text-white">Menu</h2>
-          <Row>
-            <Col md={5} className="split-col">
-            <img src={theMenu} alt="Menu on a table" style={{maxWidth: '40%', height: 'auto', borderRadius: '8px'}} />
-            </Col>
-            <Col md={7} className="split-col">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      <div className="menu-bg-color menu-home-margin text-center px-1 pb-3">
+        <h2 className="text-white pb-3">Menu</h2>
+        <Row>
+          <Col md={5} className="split-col">
+            <img src={theMenu} alt="Menu on a table" style={{maxWidth: '85%', height: 'auto', borderRadius: '8px'}} />
+          </Col>
+          <Col md={7} className="split-col">
+            <p className="text-white display-6 lh-base">Indulge in Mary Jane's exquisite Italian dishes, 
+              crafted with fresh ingredients and paired with our curated wine selection. 
+              Click to explore the full menu and savor the taste of SoHo.
             </p>
-            </Col>
-          </Row>
+            <Button as={Link} to="/menu" variant="primary" className="book-table-btn mt-3">
+              View Full Menu
+            </Button>
+          </Col>
+        </Row>
       </div>
       <footer className="pb-1 text-center text-light">    
-      </footer> */}
+      </footer>
     </div>
   );
 };

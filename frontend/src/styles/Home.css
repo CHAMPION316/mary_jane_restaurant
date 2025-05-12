@@ -24,9 +24,9 @@
 }
 
 
-/* .menu-bg-color {
+.menu-bg-color {
     background-color: black;
-} */
+}
 
 /* Add vertical padding for images on mobile */
 @media (max-width: 768px) {
@@ -36,5 +36,16 @@
     
     .split-col img {
         margin-bottom: 1rem;
+    }
+
+    .menu-home-margin {
+        margin-top: 1rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+    .menu-home-margin {
+        margin-top: 5rem;
     }
 }
