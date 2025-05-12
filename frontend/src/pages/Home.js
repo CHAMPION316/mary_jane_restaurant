@@ -100,9 +100,9 @@ const Home = () => {
                 <p className="mb-2">New York, NY 10012</p>
                 <p className="mb-2">+1 (212) 555-0123</p>
                 <div className="social-icons">
-                  <a href="#" className="text-light me-3"><i className="fab fa-x-twitter"></i></a>
-                  <a href="#" className="text-light me-3"><i className="fa-regular fa-bell"></i></a>
-                  <a href="#" className="text-light"><i className="fab fa-facebook"></i></a>
+                  <a href="https://x.com/" target="_blank" className="text-light me-3"><i className="bi bi-twitter-x"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank" className="text-light me-3"><i className="bi bi-instagram"></i></a>
+                  <a href="https://www.facebook.com/" target="_blank" className="text-light"><i className="bi bi-facebook"></i></a>
                 </div>
               </div>
             </Col>

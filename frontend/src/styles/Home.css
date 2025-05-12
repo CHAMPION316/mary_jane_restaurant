@@ -41,6 +41,19 @@
     .menu-home-margin {
         margin-top: 1rem;
     }
+
+    .footer-bg .row {
+        justify-content: center;
+    }
+    
+    .footer-bg .col-md-6:first-child {
+        text-align: center;
+    }
+    
+    .footer-bg .social-icons {
+        justify-content: center;
+        display: flex;
+    }
 }
 
 /* Desktop styles */
