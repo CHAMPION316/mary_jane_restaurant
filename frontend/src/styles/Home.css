@@ -23,6 +23,19 @@
     color: #fff !important;
 }
 
+<<<<<<< HEAD
 /* .menu-bg-color {
     background-color: black;
 } */
+=======
+/* Add vertical padding for images on mobile */
+@media (max-width: 768px) {
+    .split-col {
+        margin-bottom: 2rem;
+    }
+    
+    .split-col img {
+        margin-bottom: 1rem;
+    }
+}
+>>>>>>> a83241336a4a144da089b19fa34fea9e14866321
