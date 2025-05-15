@@ -106,7 +106,7 @@ const Home = () => {
                 </div>
               </div>
             </Col>
-            <Col md={6} className="d-flex align-items-center justify-content-center">
+            <Col md={6} className="d-flex align-items-center justify-content-center footer-top-padding">
               <p className="text-light mb-0">© 2024 Mary Jane Restaurant. All rights reserved.</p>
             </Col>
           </Row>

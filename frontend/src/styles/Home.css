@@ -54,6 +54,10 @@
         justify-content: center;
         display: flex;
     }
+
+    .footer-top-padding {
+        padding-top: 1.5rem;
+    }
 }
 
 /* Desktop styles */
