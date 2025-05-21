@@ -3,7 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 import MenuItem from '../components/MenuItem';
 
 // Sample menu data (replace with your actual Italian dishes and wines)
-const italianDishes = [
+const pizza = [
   {
     name: 'Margherita Pizza',
     description: 'Classic pizza with fresh tomatoes, mozzarella, and basil.',
@@ -11,15 +11,15 @@ const italianDishes = [
     image: 'https://via.placeholder.com/300x200.png?text=Margherita+Pizza',
   },
   {
-    name: 'Spaghetti Carbonara',
-    description: 'Creamy pasta with pancetta, eggs, and Parmesan cheese.',
-    price: 22.50,
+    name: 'Quattro Formaggi',
+    description: 'Made with four different cheeses—mozzarella, gorgonzola, parmesan, and fontina.',
+    price: 23.99,
     image: 'https://via.placeholder.com/300x200.png?text=Spaghetti+Carbonara',
   },
   {
-    name: 'Tiramisu',
-    description: 'Traditional Italian dessert with coffee, mascarpone, and cocoa.',
-    price: 12.99,
+    name: 'Marinara',
+    description: 'Tomato sauce, garlic, oregano, and olive oil',
+    price: 21.99,
     image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
   },
 ];
@@ -50,9 +50,9 @@ const Menu = () => {
     <Container className="my-5">
       {/* Italian Dishes Section */}
       <h1 className="text-center mb-4">Our Menu</h1>
-      <h2 className="mb-3">Italian Dishes</h2>
+      <h2 className="mb-3">Pizza</h2>
       <Row>
-        {italianDishes.map((item, index) => (
+        {pizza.map((item, index) => (
           <MenuItem
             key={`dish-${index}`}
             name={item.name}
