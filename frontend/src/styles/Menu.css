@@ -1,0 +1,36 @@
+.menu-item {
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.menu-item .card-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.menu-item .text-warning {
+  color: #ffc107 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-item {
+    margin-bottom: 1rem;
+  }
+  
+  .menu-item .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .menu-item .card-text {
+    font-size: 0.85rem;
+  }
+} 
