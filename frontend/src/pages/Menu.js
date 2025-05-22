@@ -44,21 +44,39 @@ const pizza = [
 
 const pasta = [
   {
-    name: 'Margherita Pizza',
-    description: 'Classic pizza with fresh tomatoes, mozzarella, and basil.',
-    price: 18.99,
+    name: 'Spaghetti alle Vongole',
+    description: 'Fresh clams, garlic, white wine, and parsley tossed with al dente.',
+    price: 31.99,
     image: 'https://via.placeholder.com/300x200.png?text=Margherita+Pizza',
   },
   {
-    name: 'Quattro Formaggi',
-    description: 'Made with four different cheeses—mozzarella, gorgonzola, parmesan, and fontina.',
-    price: 23.99,
+    name: 'Tagliatelle al Ragù Bolognese',
+    description: 'House-made tagliatelle with a rich, slow-simmered beef and pork ragù, scented with tomato and fresh herbs.',
+    price: 33.99,
     image: 'https://via.placeholder.com/300x200.png?text=Spaghetti+Carbonara',
   },
   {
-    name: 'Marinara',
-    description: 'Tomato sauce, garlic, oregano, and olive oil',
-    price: 21.99,
+    name: 'Ravioli di Ricotta e Spnaci',
+    description: 'Handmade ravioli filled with creamy ricotta and spinach, served in a sage butter sauce with toasted pine nuts.',
+    price: 29.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+  },
+  {
+    name: 'Pappardelle ai Funghi Porcini',
+    description: 'Handmade ravioli filled with creamy ricotta and spinach, served in a sage butter sauce with toasted pine nuts.',
+    price: 29.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+  },
+  {
+    name: 'Linguine ai Frutti di Mare',
+    description: 'Linguine with shrimp, mussels, and calamari in a vibrant tomato sauce, infused with basil and white wine.',
+    price: 34.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+  },
+  {
+    name: 'Orecchiette con Cime di Rapa',
+    description: 'Ear-shaped orecchiette with broccoli rabe, anchovies, garlic, and chili, finished with extra virgin olive oil.',
+    price: 27.99,
     image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
   },
 ];
