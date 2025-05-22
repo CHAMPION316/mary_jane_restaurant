@@ -66,19 +66,37 @@ const pasta = [
 
 const wines = [
   {
-    name: 'Chianti Classico',
+    name: 'Cabernet Sauvignon (dry)',
     description: 'A robust red wine with notes of cherry and spice.',
     price: 45.00,
     image: 'https://via.placeholder.com/300x200.png?text=Chianti+Classico',
   },
   {
-    name: 'Prosecco',
+    name: 'Pinot (dry)',
     description: 'A sparkling white wine, perfect for celebrations.',
     price: 38.00,
     image: 'https://via.placeholder.com/300x200.png?text=Prosecco',
   },
   {
-    name: 'Pinot Grigio',
+    name: 'Merlot (dry)',
+    description: 'A crisp white wine with hints of citrus and pear.',
+    price: 32.00,
+    image: 'https://via.placeholder.com/300x200.png?text=Pinot+Grigio',
+  },
+  {
+    name: 'Sangiovese (dry)',
+    description: 'A robust red wine with notes of cherry and spice.',
+    price: 45.00,
+    image: 'https://via.placeholder.com/300x200.png?text=Chianti+Classico',
+  },
+  {
+    name: 'Zinfandel (semi-sweet to sweet)',
+    description: 'A sparkling white wine, perfect for celebrations.',
+    price: 38.00,
+    image: 'https://via.placeholder.com/300x200.png?text=Prosecco',
+  },
+  {
+    name: 'Malbec (dry)',
     description: 'A crisp white wine with hints of citrus and pear.',
     price: 32.00,
     image: 'https://via.placeholder.com/300x200.png?text=Pinot+Grigio',
@@ -118,7 +136,7 @@ const Menu = () => {
       </Row>
 
       {/* Wines Section */}
-      <h2 className="mt-5 mb-3">Wines</h2>
+      <h2 className="mt-5 mb-3">Red Wines</h2>
       <Row>
         {wines.map((item, index) => (
           <MenuItem
