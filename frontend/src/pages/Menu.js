@@ -7,6 +7,45 @@ const pizza = [
   {
     name: 'Margherita Pizza',
     description: 'Classic pizza with fresh tomatoes, mozzarella, and basil.',
+    price: 20.50,
+    image: 'https://via.placeholder.com/300x200.png?text=Margherita+Pizza',
+  },
+  {
+    name: 'Quattro Formaggi',
+    description: 'Made with four different cheeses—mozzarella, gorgonzola, parmesan, and fontina.',
+    price: 29.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Spaghetti+Carbonara',
+  },
+  {
+    name: 'Marinara',
+    description: 'Tomato sauce, garlic, oregano, and olive oil',
+    price: 21.50,
+    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+  },
+  {
+    name: 'Pizza capricciosa',
+    description: 'mozzarella cheese, prosciutto, mushrooms, green and black olives, artichokes, and tomatoes.',
+    price: 26.50,
+    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+  },
+  {
+    name: 'Sicilian pizza',
+    description: 'Caciocavallo cheese (or Pecorino Romano), anchovy fillets, toasted breadcrumbs, fresh basil',
+    price: 23.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+  },
+  {
+    name: 'Pizza Napoletana',
+    description: 'Fresh mozzarella (fior di latte or buffalo mozzarella), fresh basil leaves, extra virgin olive oil',
+    price: 23.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+  },
+];
+
+const pasta = [
+  {
+    name: 'Margherita Pizza',
+    description: 'Classic pizza with fresh tomatoes, mozzarella, and basil.',
     price: 18.99,
     image: 'https://via.placeholder.com/300x200.png?text=Margherita+Pizza',
   },
@@ -23,6 +62,7 @@ const pizza = [
     image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
   },
 ];
+
 
 const wines = [
   {
@@ -54,7 +94,21 @@ const Menu = () => {
       <Row>
         {pizza.map((item, index) => (
           <MenuItem
-            key={`dish-${index}`}
+            key={`pizza-${index}`}
+            name={item.name}
+            description={item.description}
+            price={item.price}
+            image={item.image}
+          />
+        ))}
+      </Row>
+
+      {/* Pasta Section */}
+      <h2 className="mt-5 mb-3">Pasta</h2>
+      <Row>
+        {wines.map((item, index) => (
+          <MenuItem
+            key={`pasta-${index}`}
             name={item.name}
             description={item.description}
             price={item.price}
@@ -76,6 +130,7 @@ const Menu = () => {
           />
         ))}
       </Row>
+
     </Container>
   );
 };
