@@ -9,6 +9,12 @@ import marinaraPizza from '../assets/images/marinara-pizza.jpg'
 import capricciosaPizza from '../assets/images/capricciosa-pizza.jpg'
 import sicilianPizza from '../assets/images/sicilian-pizza.jpg'
 import napoletanaPizza from '../assets/images/napoletana-pizza.jpeg'
+import alleVongole from '../assets/images/alle-vongole.jpg'
+import raguBolognese from '../assets/images/ragu-bolognese.jpg'
+import ravioli from '../assets/images/ravioli.jpg'
+import pappardelle from '../assets/images/pappardelle.jpg'
+import linguini from '../assets/images/linguine-ai-frutti.jpg'
+import orecchiette from '../assets/images/orecchiette.jpg'
 
 // Sample menu data (replace with your actual Italian dishes and wines)
 const pizza = [
@@ -55,37 +61,37 @@ const pasta = [
     name: 'Spaghetti alle Vongole',
     description: 'Fresh clams, garlic, white wine, and parsley tossed with al dente.',
     price: 31.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Margherita+Pizza',
+    image: alleVongole,
   },
   {
     name: 'Tagliatelle al Ragù Bolognese',
     description: 'House-made tagliatelle with a rich, slow-simmered beef and pork ragù, scented with tomato and fresh herbs.',
     price: 33.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Spaghetti+Carbonara',
+    image: raguBolognese,
   },
   {
-    name: 'Ravioli di Ricotta e Spnaci',
+    name: 'Ravioli di Ricotta e Spinaci',
     description: 'Handmade ravioli filled with creamy ricotta and spinach, served in a sage butter sauce with toasted pine nuts.',
     price: 29.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+    image: ravioli,
   },
   {
     name: 'Pappardelle ai Funghi Porcini',
     description: 'Handmade ravioli filled with creamy ricotta and spinach, served in a sage butter sauce with toasted pine nuts.',
     price: 29.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+    image: pappardelle,
   },
   {
     name: 'Linguine ai Frutti di Mare',
     description: 'Linguine with shrimp, mussels, and calamari in a vibrant tomato sauce, infused with basil and white wine.',
     price: 34.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+    image: linguini,
   },
   {
     name: 'Orecchiette con Cime di Rapa',
     description: 'Ear-shaped orecchiette with broccoli rabe, anchovies, garlic, and chili, finished with extra virgin olive oil.',
     price: 27.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+    image: orecchiette,
   },
 ];
 
