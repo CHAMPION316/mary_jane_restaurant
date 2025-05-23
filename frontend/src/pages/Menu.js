@@ -159,6 +159,45 @@ const whiteWines = [
   },
 ];
 
+const desserts = [
+  {
+    name: 'Tiramisu Classico',
+    description: 'Layers of espresso-soaked savoiardi, creamy mascarpone, and cocoa, finished with a hint of amaretto for an undulgent finish',
+    price: 15.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+  },
+  {
+    name: 'Panna Cotta alla Vaniglia',
+    description: 'Silky vanilla bean panna cotta, served with a vibrant berry compote and delicate almond biscotti crumble',
+    price: 14.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+  },
+  {
+    name: 'Cannoli Sicilliani',
+    description: 'Crisp pastry shells filled with sweet ricotta, candied orange, and chocolate chips, dusted with powdered sugar',
+    price: 13.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+  },
+  {
+    name: 'Torta Caprese',
+    description: 'Flourless chocolate-almond cake, rich and fudgy, served with a scoop of hazelnut gelato and fresh rasberries.',
+    price: 16.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+  },
+  {
+    name: 'Semifreddo al Limoncello',
+    description: 'Chiled lemon semifreddo with a tangy limoncello swirl, paired with buttery shortbread and candied lemon zest',
+    price: 14.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+  },
+  {
+    name: 'Affogato al Caffè',
+    description: 'Creamy fior di latte gelato drowned in hot espresso, topped with crushed amaretti and a chocolate drizzle.',
+    price: 13.99,
+    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+  },
+];
+
 const Menu = () => {
   return (
     <Container className="my-5">
@@ -219,6 +258,19 @@ const Menu = () => {
         ))}
       </Row>
 
+      {/* Dessert Section */}
+      <h2 className="mt-5 mb-3">Desserts</h2>
+      <Row>
+        {desserts.map((item, index) => (
+          <MenuItem
+            key={`dessert-${index}`}
+            name={item.name}
+            description={item.description}
+            price={item.price}
+            image={item.image}
+          />
+        ))}
+      </Row>
     </Container>
   );
 };
