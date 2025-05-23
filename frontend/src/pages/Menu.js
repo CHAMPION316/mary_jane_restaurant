@@ -2,43 +2,51 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import MenuItem from '../components/MenuItem';
 
+// Import image from assets folder
+import margheritaPizza from '../assets/images/margherita-pizza.jpg'
+import quattroFormaggi from '../assets/images/quattro-formaggi-pizza.jpg'
+import marinaraPizza from '../assets/images/marinara-pizza.jpg'
+import capricciosaPizza from '../assets/images/capricciosa-pizza.jpg'
+import sicilianPizza from '../assets/images/sicilian-pizza.jpg'
+import napoletanaPizza from '../assets/images/napoletana-pizza.jpeg'
+
 // Sample menu data (replace with your actual Italian dishes and wines)
 const pizza = [
   {
     name: 'Margherita Pizza',
     description: 'Classic pizza with fresh tomatoes, mozzarella, and basil.',
     price: 20.50,
-    image: 'https://via.placeholder.com/300x200.png?text=Margherita+Pizza',
+    image: margheritaPizza,
   },
   {
     name: 'Quattro Formaggi',
     description: 'Made with four different cheeses—mozzarella, gorgonzola, parmesan, and fontina.',
     price: 29.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Spaghetti+Carbonara',
+    image: quattroFormaggi,
   },
   {
     name: 'Marinara',
     description: 'Tomato sauce, garlic, oregano, and olive oil',
     price: 21.50,
-    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+    image: marinaraPizza,
   },
   {
     name: 'Pizza capricciosa',
     description: 'mozzarella cheese, prosciutto, mushrooms, green and black olives, artichokes, and tomatoes.',
     price: 26.50,
-    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+    image: capricciosaPizza,
   },
   {
     name: 'Sicilian pizza',
     description: 'Caciocavallo cheese (or Pecorino Romano), anchovy fillets, toasted breadcrumbs, fresh basil',
     price: 23.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+    image: sicilianPizza,
   },
   {
     name: 'Pizza Napoletana',
     description: 'Fresh mozzarella (fior di latte or buffalo mozzarella), fresh basil leaves, extra virgin olive oil',
     price: 23.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Tiramisu',
+    image: napoletanaPizza,
   },
 ];
 
