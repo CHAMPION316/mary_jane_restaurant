@@ -15,6 +15,12 @@ import ravioli from '../assets/images/ravioli.jpg'
 import pappardelle from '../assets/images/pappardelle.jpg'
 import linguini from '../assets/images/linguine-ai-frutti.jpg'
 import orecchiette from '../assets/images/orecchiette.jpg'
+import cabernetSauvignon from '../assets/images/cabernet-sauvignon.jpg'
+import pinotNoir from '../assets/images/pinot-noir.png'
+import merlot from '../assets/images/merlot.png'
+import sangiovese from '../assets/images/sangiovese.jpg'
+import zinfandel from '../assets/images/zinfandel.png'
+import malbec from '../assets/images/malbec.png'
 
 // Sample menu data (replace with your actual Italian dishes and wines)
 const pizza = [
@@ -100,37 +106,37 @@ const redWines = [
     name: 'Cabernet Sauvignon (dry)',
     description: 'Bold and full-bodied with dark fruit, cassis, and hints of oak. Perfect with hearty dishes.',
     price: 22.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Chianti+Classico',
+    image: cabernetSauvignon,
   },
   {
     name: 'Pinot Noir (dry)',
     description: 'Elegant and silky, offering red cherry, raspberry, and earthy notes. Pairs well with poultry.',
     price: 20.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Pinot+Grigio',
+    image: pinotNoir,
   },
   {
     name: 'Merlot (dry)',
     description: 'Smooth and plush with flavors of blackberry, plum, and soft tannins. Great with pasta.',
     price: 18.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Pinot+Grigio',
+    image: merlot,
   },
   {
     name: 'Sangiovese (dry)',
     description: 'Vibrant and rustic, featuring tart cherry, herbs, and a touch of spice. Ideal with tomato-based dishes.',
     price: 18.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Chianti+Classico',
+    image: sangiovese,
   },
   {
     name: 'Zinfandel (semi-sweet to sweet)',
     description: 'Juicy and bold with ripe berry, jam, and a hint of pepper. Complements spicy foods.',
     price: 19.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Chianti+Classico',
+    image: zinfandel,
   },
   {
     name: 'Malbec (dry)',
     description: 'Rich and velvety, bursting with blackberry, cocoa, and subtle smoke. Excellent with grilled meats.',
     price: 21.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Pinot+Grigio',
+    image: malbec,
   },
 ];
 
@@ -145,7 +151,7 @@ const whiteWines = [
     name: 'Sauvignon Blanc (dry)',
     description: 'Crisp and zesty with citrus, green apple, and grassy hints. Perfect with salads or fish.',
     price: 18.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Sauvignon+Blanc',
+    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
   },
   {
     name: 'Pinot Grigio (dry)',
