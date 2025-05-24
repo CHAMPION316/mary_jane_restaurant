@@ -2,25 +2,37 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import MenuItem from '../components/MenuItem';
 
-// Import image from assets folder
+// Import pizza images from assets folder
 import margheritaPizza from '../assets/images/margherita-pizza.jpg'
 import quattroFormaggi from '../assets/images/quattro-formaggi-pizza.jpg'
 import marinaraPizza from '../assets/images/marinara-pizza.jpg'
 import capricciosaPizza from '../assets/images/capricciosa-pizza.jpg'
 import sicilianPizza from '../assets/images/sicilian-pizza.jpg'
 import napoletanaPizza from '../assets/images/napoletana-pizza.jpeg'
+
+// Import pasta images from assets folder
 import alleVongole from '../assets/images/alle-vongole.jpg'
 import raguBolognese from '../assets/images/ragu-bolognese.jpg'
 import ravioli from '../assets/images/ravioli.jpg'
 import pappardelle from '../assets/images/pappardelle.jpg'
 import linguini from '../assets/images/linguine-ai-frutti.jpg'
 import orecchiette from '../assets/images/orecchiette.jpg'
+
+// Import red wine images from assets folder
 import cabernetSauvignon from '../assets/images/cabernet-sauvignon.jpg'
 import pinotNoir from '../assets/images/pinot-noir.png'
 import merlot from '../assets/images/merlot.png'
 import sangiovese from '../assets/images/sangiovese.jpg'
 import zinfandel from '../assets/images/zinfandel.png'
 import malbec from '../assets/images/malbec.png'
+
+// Import white wine images from assets folder
+import chardonnay from '../assets/images/chardonnay.png'
+import sauvignonBlanc from '../assets/images/sauvignon-blanc.png'
+import pinotGrigio from '../assets/images/pinot-grigio.png'
+import riesling from '../assets/images/riesling.png'
+import moscato from '../assets/images/moscato.png'
+import cheninBlanc from '../assets/images/chenin-blanc.png'
 
 // Sample menu data (replace with your actual Italian dishes and wines)
 const pizza = [
@@ -145,37 +157,37 @@ const whiteWines = [
     name: 'Chardonnay (dry to semi-sweet)',
     description: 'Creamy and versatile with apple, pear, and buttery oak notes. Pairs with seafood or chicken.',
     price: 20.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+    image: chardonnay,
   },
   {
     name: 'Sauvignon Blanc (dry)',
     description: 'Crisp and zesty with citrus, green apple, and grassy hints. Perfect with salads or fish.',
     price: 18.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+    image: sauvignonBlanc,
   },
   {
     name: 'Pinot Grigio (dry)',
     description: 'Light and refreshing, offering pear, lemon, and a clean finish. Great with light appetizers.',
     price: 16.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Prosecco',
+    image: pinotGrigio,
   },
   {
     name: 'Riesling (semi-sweet)',
     description: 'Bright and aromatic with peach, apricot, and a touch of honey. Ideal with spicy dishes.',
     price: 18.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Riesling',
+    image: riesling,
   },
   {
     name: 'Moscato (sweet)',
     description: 'Sweet and fizzy with tropical fruit, peach, and floral notes. Wonderful with desserts.',
     price: 16.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+    image: moscato,
   },
   {
     name: 'Chenin Blanc (dry to semi-sweet)',
     description: 'Lively and versatile, showcasing apple, melon, and a hint of minerality. Pairs with creamy dishes.',
     price: 18.00,
-    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+    image: cheninBlanc,
   },
 ];
 

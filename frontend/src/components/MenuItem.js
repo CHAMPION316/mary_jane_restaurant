@@ -10,7 +10,8 @@ const MenuItem = ({ name, description, price, image }) => {
   const isWine = name.includes('(dry)') || 
                  name.includes('(semi-sweet)') || 
                  name.includes('(sweet)') || 
-                 name.includes('(semi-sweet to sweet)');
+                 name.includes('(semi-sweet to sweet)') ||
+                 name.includes('(dry to semi-sweet)');
   
   // Set image style based on whether it's a wine or not
   const imageStyle = {
