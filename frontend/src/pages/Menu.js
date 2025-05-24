@@ -34,6 +34,14 @@ import riesling from '../assets/images/riesling.png'
 import moscato from '../assets/images/moscato.png'
 import cheninBlanc from '../assets/images/chenin-blanc.png'
 
+// Import dessert images from assets folder
+import tiramisu from '../assets/images/tiramisu.jpg'
+import pannaCotta from '../assets/images/panna-cotta.jpg'
+import cannoli from '../assets/images/cannoli.jpg'
+import tortaCaprese from '../assets/images/torta-caprese.jpg'
+import semifreddoLimoncello from '../assets/images/semifreddo-limoncello.png'
+import affogato from '../assets/images/affogato.jpg'
+
 // Sample menu data (replace with your actual Italian dishes and wines)
 const pizza = [
   {
@@ -196,37 +204,37 @@ const desserts = [
     name: 'Tiramisu Classico',
     description: 'Layers of espresso-soaked savoiardi, creamy mascarpone, and cocoa, finished with a hint of amaretto for an undulgent finish',
     price: 15.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+    image: tiramisu,
   },
   {
     name: 'Panna Cotta alla Vaniglia',
     description: 'Silky vanilla bean panna cotta, served with a vibrant berry compote and delicate almond biscotti crumble',
     price: 14.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+    image: pannaCotta,
   },
   {
     name: 'Cannoli Sicilliani',
     description: 'Crisp pastry shells filled with sweet ricotta, candied orange, and chocolate chips, dusted with powdered sugar',
     price: 13.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+    image: cannoli,
   },
   {
     name: 'Torta Caprese',
     description: 'Flourless chocolate-almond cake, rich and fudgy, served with a scoop of hazelnut gelato and fresh rasberries.',
     price: 16.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+    image: tortaCaprese,
   },
   {
     name: 'Semifreddo al Limoncello',
     description: 'Chiled lemon semifreddo with a tangy limoncello swirl, paired with buttery shortbread and candied lemon zest',
     price: 14.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+    image: semifreddoLimoncello,
   },
   {
     name: 'Affogato al Caffè',
     description: 'Creamy fior di latte gelato drowned in hot espresso, topped with crushed amaretti and a chocolate drizzle.',
     price: 13.99,
-    image: 'https://via.placeholder.com/300x200.png?text=Chardonnay',
+    image: affogato,
   },
 ];
 
