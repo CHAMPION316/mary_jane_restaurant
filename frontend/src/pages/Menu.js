@@ -266,7 +266,7 @@ const Menu = () => {
       >
         <Container className="position-relative" style={{ zIndex: 1, paddingTop: 0, marginTop: 0 }}>
           {/* Pizza Section */}
-          <h1 className="text-center mb-4 text-white">Our Menu</h1>
+          <h1 className="text-center mb-4 text-white">Menu</h1>
           <h2 className="mb-3 text-white">Pizza</h2>
           <Row>
             {pizza.map((item, index) => (
