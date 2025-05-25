@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import MenuItem from '../components/MenuItem';
+import menuBackground from '../assets/images/menu-background.jpeg';
 
 // Import pizza images from assets folder
 import margheritaPizza from '../assets/images/margherita-pizza.jpg'
@@ -42,7 +43,7 @@ import tortaCaprese from '../assets/images/torta-caprese.jpg'
 import semifreddoLimoncello from '../assets/images/semifreddo-limoncello.png'
 import affogato from '../assets/images/affogato.jpg'
 
-// Sample menu data (replace with your actual Italian dishes and wines)
+// List of pizza dishes available on the menu, used for displaying pizza items in the UI
 const pizza = [
   {
     name: 'Margherita Pizza',
@@ -82,6 +83,7 @@ const pizza = [
   },
 ];
 
+// List of pasta dishes available on the menu, used for displaying pasta items in the UI
 const pasta = [
   {
     name: 'Spaghetti alle Vongole',
@@ -121,6 +123,7 @@ const pasta = [
   },
 ];
 
+// List of red wines available on the menu, used for displaying red wine drinks in the UI
 const redWines = [
   {
     name: 'Cabernet Sauvignon (dry)',
@@ -160,6 +163,7 @@ const redWines = [
   },
 ];
 
+// List of white wines available on the menu, used for displaying white wine drinks in the UI
 const whiteWines = [
   {
     name: 'Chardonnay (dry to semi-sweet)',
@@ -199,6 +203,7 @@ const whiteWines = [
   },
 ];
 
+// List of pasta dishes available on the menu, used for displaying dessert items in the UI
 const desserts = [
   {
     name: 'Tiramisu Classico',
@@ -240,78 +245,99 @@ const desserts = [
 
 const Menu = () => {
   return (
-    <Container className="my-5">
-      {/* Italian Dishes Section */}
-      <h1 className="text-center mb-4">Our Menu</h1>
-      <h2 className="mb-3">Pizza</h2>
-      <Row>
-        {pizza.map((item, index) => (
-          <MenuItem
-            key={`pizza-${index}`}
-            name={item.name}
-            description={item.description}
-            price={item.price}
-            image={item.image}
-          />
-        ))}
-      </Row>
+    <div
+      style={{
+        backgroundImage: `url(${menuBackground})`,
+        backgroundAttachment: 'fixed',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+        width: '100%',
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
+          minHeight: '100vh',
+          width: '100%',
+          paddingTop: 0,
+          marginTop: 0,
+        }}
+      >
+        <Container className="position-relative" style={{ zIndex: 1, paddingTop: 0, marginTop: 0 }}>
+          {/* Pizza Section */}
+          <h1 className="text-center mb-4 text-white">Our Menu</h1>
+          <h2 className="mb-3 text-white">Pizza</h2>
+          <Row>
+            {pizza.map((item, index) => (
+              <MenuItem
+                key={`pizza-${index}`}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+              />
+            ))}
+          </Row>
 
-      {/* Pasta Section */}
-      <h2 className="mt-5 mb-3">Pasta</h2>
-      <Row>
-        {pasta.map((item, index) => (
-          <MenuItem
-            key={`pasta-${index}`}
-            name={item.name}
-            description={item.description}
-            price={item.price}
-            image={item.image}
-          />
-        ))}
-      </Row>
+          {/* Pasta Section */}
+          <h2 className="mt-5 mb-3 text-white">Pasta</h2>
+          <Row>
+            {pasta.map((item, index) => (
+              <MenuItem
+                key={`pasta-${index}`}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+              />
+            ))}
+          </Row>
 
-      {/* Red Wines Section */}
-      <h2 className="mt-5 mb-3">Red Wines</h2>
-      <Row>
-        {redWines.map((item, index) => (
-          <MenuItem
-            key={`red-wine-${index}`}
-            name={item.name}
-            description={item.description}
-            price={item.price}
-            image={item.image}
-          />
-        ))}
-      </Row>
+          {/* Red Wines Section */}
+          <h2 className="mt-5 mb-3 text-white">Red Wines</h2>
+          <Row>
+            {redWines.map((item, index) => (
+              <MenuItem
+                key={`red-wine-${index}`}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+              />
+            ))}
+          </Row>
 
-      {/* White Wines Section */}
-      <h2 className="mt-5 mb-3">White Wines</h2>
-      <Row>
-        {whiteWines.map((item, index) => (
-          <MenuItem
-            key={`white-wine-${index}`}
-            name={item.name}
-            description={item.description}
-            price={item.price}
-            image={item.image}
-          />
-        ))}
-      </Row>
+          {/* White Wines Section */}
+          <h2 className="mt-5 mb-3 text-white">White Wines</h2>
+          <Row>
+            {whiteWines.map((item, index) => (
+              <MenuItem
+                key={`white-wine-${index}`}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+              />
+            ))}
+          </Row>
 
-      {/* Dessert Section */}
-      <h2 className="mt-5 mb-3">Desserts</h2>
-      <Row>
-        {desserts.map((item, index) => (
-          <MenuItem
-            key={`dessert-${index}`}
-            name={item.name}
-            description={item.description}
-            price={item.price}
-            image={item.image}
-          />
-        ))}
-      </Row>
-    </Container>
+          {/* Dessert Section */}
+          <h2 className="mt-5 mb-3 text-white">Desserts</h2>
+          <Row>
+            {desserts.map((item, index) => (
+              <MenuItem
+                key={`dessert-${index}`}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+              />
+            ))}
+          </Row>
+        </Container>
+      </div>
+    </div>
   );
 };
 
