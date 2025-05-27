@@ -1,0 +1,30 @@
+.image-modal .modal-content {
+  background-color: transparent;
+  border: none;
+}
+
+.image-modal .modal-header {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.image-modal .modal-header .btn-close {
+  background-color: white;
+  opacity: 0.8;
+  margin: 10px;
+}
+
+.image-modal .modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+} 
