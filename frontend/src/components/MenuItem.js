@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Col } from 'react-bootstrap';
+import ImageModal from './ImageModal';
 
 const MenuItem = ({ name, description, price, image }) => {
+  const [showModal, setShowModal] = useState(false);
+  
   // Split the name to separate the wine type
   const [wineName, wineType] = name.split(' (');
   const formattedWineType = wineType ? `(${wineType}` : '';
@@ -16,13 +19,20 @@ const MenuItem = ({ name, description, price, image }) => {
   // Set image style based on whether it's a wine or not
   const imageStyle = {
     height: '200px',
-    objectFit: isWine ? 'contain' : 'cover'
+    objectFit: isWine ? 'contain' : 'cover',
+    cursor: 'pointer'
   };
 
   return (
     <Col md={4} className="mb-4">
       <Card className="h-100 shadow-sm">
-        <Card.Img variant="top" src={image} alt={name} style={imageStyle} />
+        <Card.Img 
+          variant="top" 
+          src={image} 
+          alt={name} 
+          style={imageStyle}
+          onClick={() => setShowModal(true)}
+        />
         <Card.Body>
           <Card.Title>
             {wineName}
@@ -32,6 +42,11 @@ const MenuItem = ({ name, description, price, image }) => {
           <Card.Text className="fw-bold">${price.toFixed(2)}</Card.Text>
         </Card.Body>
       </Card>
+      <ImageModal 
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        image={image}
+      />
     </Col>
   );
 };
