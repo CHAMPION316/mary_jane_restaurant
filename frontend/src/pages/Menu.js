@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import MenuItem from '../components/MenuItem';
+import Footer from '../components/Footer'
 import menuBackground from '../assets/images/menu-background.jpeg';
 
 // Import pizza images from assets folder
@@ -336,6 +337,7 @@ const Menu = () => {
             ))}
           </Row>
         </Container>
+        <Footer />
       </div>
     </div>
   );
