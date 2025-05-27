@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
+import Footer from '../components/Footer.js'
 
 // Import image from assets folder
 import frontPage from '../assets/images/front-page.jpg';
