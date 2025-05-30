@@ -5,7 +5,8 @@ import '../styles/BookingForm.css';
 const BookingForm = () => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  // console.log('Selected time:', time);
+  const [guests, setGuests] = useState(2);
+  console.log(guests);
 
   return (
     <Card className="booking-form-card">
@@ -38,8 +39,13 @@ const BookingForm = () => {
             </div>
             <div className="col-4">
               <Form.Group className="mb-3" controlId="guests">
-                <Form.Label>Number of Guests</Form.Label>
-                <Form.Control type="number" min="2" max="12" />
+                <Form.Label>Number of Guests (2-12)</Form.Label>
+                <Form.Control 
+                  type="number" 
+                  min="2" 
+                  max="12"
+                  value={guests}
+                  onChange={(e) => setGuests(Number(e.target.value))} />
               </Form.Group>
             </div>
           </div>
