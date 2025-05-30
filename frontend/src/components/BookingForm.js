@@ -5,8 +5,7 @@ import '../styles/BookingForm.css';
 const BookingForm = () => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [guests, setGuests] = useState(2);
-  console.log(guests);
+  const [guests, setGuests] = useState(2);;
 
   return (
     <Card className="booking-form-card">
