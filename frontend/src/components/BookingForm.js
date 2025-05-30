@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Card, Button } from 'react-bootstrap';
 import '../styles/BookingForm.css';
 
-function BookingForm() {
+const BookingForm = () => {
+  const [date, setDate] = useState('');
+
   return (
     <Card className="booking-form-card">
       <Card.Body>
@@ -11,7 +13,10 @@ function BookingForm() {
             <div className="col-4">
               <Form.Group className="mb-3" controlId="date">
                 <Form.Label>Date</Form.Label>
-                <Form.Control type="date" />
+                <Form.Control 
+                  type="date"
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)} />
               </Form.Group>
             </div>
             <div className="col-4">
