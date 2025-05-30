@@ -4,6 +4,8 @@ import '../styles/BookingForm.css';
 
 const BookingForm = () => {
   const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
+  // console.log('Selected time:', time); *remove when done debugging*
 
   return (
     <Card className="booking-form-card">
@@ -22,7 +24,11 @@ const BookingForm = () => {
             <div className="col-4">
               <Form.Group className="mb-3" controlId="time">
                 <Form.Label>Time</Form.Label>
-                <Form.Select>
+                <Form.Select
+                  type="time"
+                  value={time}
+                  onChange={(e) => setTime(e.target.value)}
+                  >
                   <option value="" disabled>Select a time</option>
                   <option value="4:00 PM">4:00 PM</option>
                   <option value="6:00 PM">6:00 PM</option>
