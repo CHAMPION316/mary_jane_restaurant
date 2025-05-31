@@ -59,7 +59,16 @@ const BookingForm = () => {
               onChange={(e) => setWholeRestaurant(e.target.checked)} />
           </Form.Group>
 
-          <Button variant="primary" className="w-100">
+          <Button 
+            variant="primary" 
+            className="w-100"
+            disabled={!date || !time || !guests}
+            onClick={() => {
+              const formData = {date, time, guests, wholeRestaurant};
+              console.log('Form Data', formData);
+              alert('Booking submitted! Check console.')
+            }}
+          >
             Book Now
           </Button>
         </Form>
