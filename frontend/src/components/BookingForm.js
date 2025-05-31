@@ -5,8 +5,10 @@ import '../styles/BookingForm.css';
 const BookingForm = () => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [guests, setGuests] = useState(2);;
+  const [guests, setGuests] = useState(2);
+  const [wholeRestaurant, setWholeRestaurant] = useState(false);
 
+  // BookingForm card component
   return (
     <Card className="booking-form-card">
       <Card.Body>
@@ -50,7 +52,11 @@ const BookingForm = () => {
           </div>
 
           <Form.Group className="mb-3" controlId="wholeRestaurant">
-            <Form.Check type="checkbox" label="Reserve Whole Restaurant" />
+            <Form.Check 
+              type="checkbox" 
+              label="Reserve Whole Restaurant"
+              checked={wholeRestaurant}
+              onChange={(e) => setWholeRestaurant(e.target.checked)} />
           </Form.Group>
 
           <Button variant="primary" className="w-100">
