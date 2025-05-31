@@ -65,8 +65,7 @@ const BookingForm = () => {
             disabled={!date || !time || !guests}
             onClick={() => {
               const formData = {date, time, guests, wholeRestaurant};
-              console.log('Form Data', formData);
-              alert('Booking submitted! Check console.')
+              alert('Thank you for your booking! We will contact you shortly to confirm your reservation.')
             }}
           >
             Book Now
