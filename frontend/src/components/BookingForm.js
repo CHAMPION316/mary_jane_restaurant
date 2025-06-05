@@ -40,11 +40,13 @@ const BookingForm = () => {
             </div>
             <div className="col-4">
               <Form.Group className="mb-3" controlId="guests">
-                <Form.Label>Number of Guests (2-12)</Form.Label>
+                <Form.Label>
+                  {wholeRestaurant ? 'Number of Guests (60-94)' : 'Number of Guests (2-12)'}
+                </Form.Label>
                 <Form.Control 
                   type="number" 
-                  min="2" 
-                  max="12"
+                  min={wholeRestaurant ? "60" : "2"}
+                  max={wholeRestaurant ? "94" : "12"}
                   value={guests}
                   onChange={(e) => setGuests(Number(e.target.value))} />
               </Form.Group>
@@ -56,15 +58,19 @@ const BookingForm = () => {
               type="checkbox" 
               label="Reserve Whole Restaurant"
               checked={wholeRestaurant}
-              onChange={(e) => setWholeRestaurant(e.target.checked)} />
+              onChange={(e) => {
+                setWholeRestaurant(e.target.checked);
+                setGuests(e.target.checked ? 60 : 2);
+              }} />
           </Form.Group>
 
           <Button 
             variant="primary" 
             className="w-100"
-            disabled={!date || !time || !guests}
+            disabled={!date || !time || (wholeRestaurant ? (guests < 60 || guests > 94) : (guests < 2 || guests > 12))}
             onClick={() => {
               const formData = {date, time, guests, wholeRestaurant};
+              console.log('Form data:', formData);
               alert('Thank you for your booking! We will contact you shortly to confirm your reservation.')
             }}
           >
