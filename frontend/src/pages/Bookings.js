@@ -1,6 +1,7 @@
 import React from 'react';
 import BookingForm from '../components/BookingForm';
 import bookingBackground from '../assets/images/booking-bg.jpg';
+import { Container } from 'react-bootstrap';
 
 const Bookings = () => {
   return (
@@ -14,10 +15,22 @@ const Bookings = () => {
         width: '100%',
       }}
     >
-      <div className="container mt-5">
-        <h1>Bookings</h1>
-        <p>Make a reservation at The Mary Jane.</p>
-        <BookingForm />
+      <div 
+        style={{
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
+          minHeight: '100vh',
+          width: '100%',
+          paddingTop: 0,
+          marginTop: 0,
+        }}
+      >
+      <Container className="position-relative" style={{ zIndex: 1, paddingTop: 32, marginTop: 0 }}>
+        <div className="container mt-5">
+          <h1 className="text-center mb-4 text-white menu-title">Bookings</h1>
+          <p className="text-center mb-4 text-white menu-title">Make a reservation at The Mary Jane.</p>
+          <BookingForm />
+        </div>
+      </Container>
       </div>
     </div>
   );
