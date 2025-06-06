@@ -2,6 +2,7 @@ import React from 'react';
 import BookingForm from '../components/BookingForm';
 import bookingBackground from '../assets/images/booking-bg.jpg';
 import { Container } from 'react-bootstrap';
+import Footer from '../components/Footer.js'
 
 const Bookings = () => {
   return (
@@ -32,6 +33,7 @@ const Bookings = () => {
         </div>
       </Container>
       </div>
+      <Footer />
     </div>
   );
 };
