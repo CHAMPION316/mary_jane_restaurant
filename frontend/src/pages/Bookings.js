@@ -26,8 +26,8 @@ const Bookings = () => {
       >
       <Container className="position-relative" style={{ zIndex: 1, paddingTop: 32, marginTop: 0 }}>
         <div className="container mt-5">
-          <h1 className="text-center mb-4 text-white menu-title">Bookings</h1>
-          <p className="text-center mb-4 text-white menu-title">Make a reservation at The Mary Jane.</p>
+          <h1 className="text-center mb-4 text-white booking-title">Bookings</h1>
+          <p className="text-center mb-4 text-white">Make a reservation at The Mary Jane</p>
           <BookingForm />
         </div>
       </Container>
