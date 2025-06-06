@@ -14,6 +14,26 @@ const BookingForm = () => {
       <Card.Body>
         <Form>
           <div className="row">
+            <div className="col-6">
+              <Form.Group className="mb-3" contgrolId="fname">
+                <Form.Label>First Name</Form.Label>
+                <Form.Control
+                type="text"
+                >
+                </Form.Control>
+              </Form.Group>
+            </div>
+            <div className="col-6">
+              <Form.Group className="mb-3" contgrolId="lname">
+                  <Form.Label>Last Name</Form.Label>
+                  <Form.Control
+                  type="text"
+                  >
+                  </Form.Control>
+                </Form.Group>
+            </div>
+          </div>
+          <div className="row">
             <div className="col-4">
               <Form.Group className="mb-3" controlId="date">
                 <Form.Label>Date</Form.Label>
