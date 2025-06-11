@@ -3,6 +3,8 @@ import { Form, Card, Button, FormGroup, FormLabel, FormControl } from 'react-boo
 import '../styles/BookingForm.css';
 
 const BookingForm = () => {
+  const [fname, setFname] = useState('');
+  const [lname, setLname] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(2);
@@ -19,8 +21,9 @@ const BookingForm = () => {
                 <Form.Label>First Name</Form.Label>
                 <Form.Control
                 type="text"
-                >
-                </Form.Control>
+                value={fname}
+                onChange={(e) => setFname(e.target.value)}
+                />
               </Form.Group>
             </div>
             <div className="col-6">
@@ -28,8 +31,9 @@ const BookingForm = () => {
                   <Form.Label>Last Name</Form.Label>
                   <Form.Control
                   type="text"
-                  >
-                  </Form.Control>
+                  value={lname}
+                  onChange={(e) => setLname(e.target.value)}
+                  />
                 </Form.Group>
             </div>
           </div>
@@ -48,7 +52,8 @@ const BookingForm = () => {
                 <Form.Control 
                   type="date"
                   value={date}
-                  onChange={(e) => setDate(e.target.value)} />
+                  onChange={(e) => setDate(e.target.value)} 
+                />
               </Form.Group>
             </div>
             <div className="col-4">
@@ -97,7 +102,7 @@ const BookingForm = () => {
             className="w-100"
             disabled={!date || !time || (wholeRestaurant ? (guests < 60 || guests > 94) : (guests < 2 || guests > 12))}
             onClick={() => {
-              const formData = {date, time, guests, wholeRestaurant};
+              const formData = {fname, lname, date, time, guests, wholeRestaurant};
               console.log('Form data:', formData);
               alert('Thank you for your booking! We will contact you shortly to confirm your reservation.')
             }}
