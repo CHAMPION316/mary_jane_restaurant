@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Card, Button } from 'react-bootstrap';
+import { Form, Card, Button, FormGroup, FormLabel, FormControl } from 'react-bootstrap';
 import '../styles/BookingForm.css';
 
 const BookingForm = () => {
@@ -31,6 +31,14 @@ const BookingForm = () => {
                   >
                   </Form.Control>
                 </Form.Group>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <FormGroup className="mb-3" controlId="formBaiscEmail">
+                <FormLabel>Email</FormLabel>
+                <FormControl type="email" placeholder="Enter email"></FormControl>
+              </FormGroup>
             </div>
           </div>
           <div className="row">
