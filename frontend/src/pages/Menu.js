@@ -267,8 +267,8 @@ const Menu = () => {
       >
         <Container className="position-relative" style={{ zIndex: 1, paddingTop: 32, marginTop: 0 }}>
           {/* Pizza Section */}
-          <h1 className="text-center mb-4 text-white menu-title">Menu</h1>
-          <h2 className="mb-3 text-white menu-category-title">Pizza</h2>
+          <h1 className="text-center mb-4 text-white jacques-title">Menu</h1>
+          <h2 className="mb-3 text-white jacques-category-title">Pizza</h2>
           <Row>
             {pizza.map((item, index) => (
               <MenuItem
@@ -282,7 +282,7 @@ const Menu = () => {
           </Row>
 
           {/* Pasta Section */}
-          <h2 className="mt-5 mb-3 text-white menu-category-title">Pasta</h2>
+          <h2 className="mt-5 mb-3 text-white jacques-category-title">Pasta</h2>
           <Row>
             {pasta.map((item, index) => (
               <MenuItem
@@ -296,7 +296,7 @@ const Menu = () => {
           </Row>
 
           {/* Red Wines Section */}
-          <h2 className="mt-5 mb-3 text-white menu-category-title">Red Wines</h2>
+          <h2 className="mt-5 mb-3 text-white jacques-category-title">Red Wines</h2>
           <Row>
             {redWines.map((item, index) => (
               <MenuItem
@@ -310,7 +310,7 @@ const Menu = () => {
           </Row>
 
           {/* White Wines Section */}
-          <h2 className="mt-5 mb-3 text-white menu-category-title">White Wines</h2>
+          <h2 className="mt-5 mb-3 text-white jacques-category-title">White Wines</h2>
           <Row>
             {whiteWines.map((item, index) => (
               <MenuItem
@@ -324,7 +324,7 @@ const Menu = () => {
           </Row>
 
           {/* Dessert Section */}
-          <h2 className="mt-5 mb-3 text-white menu-category-title">Desserts</h2>
+          <h2 className="mt-5 mb-3 text-white jacques-category-title">Desserts</h2>
           <Row>
             {desserts.map((item, index) => (
               <MenuItem
