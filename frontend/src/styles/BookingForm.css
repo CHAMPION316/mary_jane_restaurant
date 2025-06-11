@@ -9,4 +9,9 @@
       width: 100%; /* Full width to stack */
       margin-bottom: 1rem; /* Optional spacing */
     }
+
+    .booking-form-card .col-6 {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
