@@ -6,6 +6,7 @@ const BookingForm = () => {
   const [fname, setFname] = useState('');
   const [lname, setLname] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(2);
@@ -41,14 +42,27 @@ const BookingForm = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col">
-              <FormGroup className="mb-3" controlId="formBaiscEmail">
+            <div className="col-6">
+              <FormGroup className="mb-3" controlId="email">
                 <FormLabel>Email</FormLabel>
                 <FormControl 
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)} 
                 placeholder="Email"
+                />
+              </FormGroup>
+            </div>
+            <div className="col-6">
+              <FormGroup className="mb-3" controlId="phone">
+                <FormLabel>Phone number</FormLabel>
+                <FormControl
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="+1 (555) 555-5555"
+                  pattern="[+]?[0-9\s-()]+"
+                  title="Please enter a valid phone number with country code (e.g., +1 (555) 555-5555)"
                 />
               </FormGroup>
             </div>
@@ -108,9 +122,20 @@ const BookingForm = () => {
           <Button 
             variant="primary" 
             className="w-100"
-            disabled={!date || !time || (wholeRestaurant ? (guests < 60 || guests > 94) : (guests < 2 || guests > 12))}
+            disabled={
+              !fname || 
+              !lname || 
+              !email || 
+              !phone || 
+              !date || 
+              !time || 
+              (wholeRestaurant 
+                ? (guests < 60 || guests > 94) 
+                : (guests < 2 || guests > 12)
+              )
+            }
             onClick={() => {
-              const formData = {fname, lname, email, date, time, guests, wholeRestaurant};
+              const formData = {fname, lname, email, phone, date, time, guests, wholeRestaurant};
               console.log('Form data:', formData);
               alert('Thank you for your booking! We will contact you shortly to confirm your reservation.')
             }}
