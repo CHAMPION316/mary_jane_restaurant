@@ -24,6 +24,7 @@ const BookingForm = () => {
                 type="text"
                 value={fname}
                 onChange={(e) => setFname(e.target.value)}
+                placeholder="First Name"
                 />
               </Form.Group>
             </div>
@@ -34,6 +35,7 @@ const BookingForm = () => {
                   type="text"
                   value={lname}
                   onChange={(e) => setLname(e.target.value)}
+                  placeholder="Last Name"
                   />
                 </Form.Group>
             </div>
@@ -46,7 +48,7 @@ const BookingForm = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)} 
-                placeholder="Enter email"
+                placeholder="Email"
                 />
               </FormGroup>
             </div>
