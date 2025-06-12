@@ -5,6 +5,7 @@ import '../styles/BookingForm.css';
 const BookingForm = () => {
   const [fname, setFname] = useState('');
   const [lname, setLname] = useState('');
+  const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(2);
@@ -41,7 +42,12 @@ const BookingForm = () => {
             <div className="col">
               <FormGroup className="mb-3" controlId="formBaiscEmail">
                 <FormLabel>Email</FormLabel>
-                <FormControl type="email" placeholder="Enter email"></FormControl>
+                <FormControl 
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)} 
+                placeholder="Enter email"
+                />
               </FormGroup>
             </div>
           </div>
@@ -102,7 +108,7 @@ const BookingForm = () => {
             className="w-100"
             disabled={!date || !time || (wholeRestaurant ? (guests < 60 || guests > 94) : (guests < 2 || guests > 12))}
             onClick={() => {
-              const formData = {fname, lname, date, time, guests, wholeRestaurant};
+              const formData = {fname, lname, email, date, time, guests, wholeRestaurant};
               console.log('Form data:', formData);
               alert('Thank you for your booking! We will contact you shortly to confirm your reservation.')
             }}
