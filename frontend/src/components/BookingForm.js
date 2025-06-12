@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Card, Button, FormGroup, FormLabel, FormControl } from 'react-bootstrap';
+import { formatPhoneNumber } from '../utils/phoneFormat';
 import '../styles/BookingForm.css';
 
 const BookingForm = () => {
@@ -59,10 +60,9 @@ const BookingForm = () => {
                 <FormControl
                   type="tel"
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  placeholder="+1 (555) 555-5555"
-                  pattern="[+]?[0-9\s-()]+" // ...................Try and change the pattern to "[0-9]{3}-[0-9]{3}-[0-9]{4}" but with the plus and country code (fix it later)
-                  title="Please enter a valid phone number with country code (e.g., +1 (555) 555-5555)"
+                  onChange={(e) => setPhone(formatPhoneNumber(e.target.value))}
+                  placeholder="+1 555 555 5555"
+                  title="Please enter a valid phone number with country code (e.g., +1 555 555 5555)"
                 />
               </FormGroup>
             </div>
