@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
-import { Form, Card, Button, FormGroup, FormLabel, FormControl } from 'react-bootstrap';
-import { formatPhoneNumber } from '../utils/phoneFormat';
+import React, { useState, useMemo } from 'react';
+import { Form, Card, Button } from 'react-bootstrap';
+import {
+  usePhoneInput,
+  defaultCountries,
+  parseCountry,
+  FlagImage,
+} from 'react-international-phone';
 import '../styles/BookingForm.css';
 
 const BookingForm = () => {
@@ -13,6 +18,23 @@ const BookingForm = () => {
   const [guests, setGuests] = useState(2);
   const [wholeRestaurant, setWholeRestaurant] = useState(false);
 
+  // Prepare full country list for the native select
+  const countryOptions = useMemo(
+    () => defaultCountries.map((c) => parseCountry(c)),
+    []
+  );
+
+  // International phone input using the headless hook
+  const { inputValue, handlePhoneValueChange, country, setCountry } = usePhoneInput({
+    defaultCountry: 'us',
+    value: phone,
+    disableDialCodeAndPrefix: true,
+    disableDialCodePrefill: true,
+    onChange: (data) => {
+      setPhone(data.phone || '');
+    },
+  });
+
   // BookingForm card component
   return (
     <Card className="booking-form-card">
@@ -20,7 +42,7 @@ const BookingForm = () => {
         <Form>
           <div className="row">
             <div className="col-6">
-              <Form.Group className="mb-3" contgrolId="fname">
+              <Form.Group className="mb-3" controlId="fname">
                 <Form.Label>First Name</Form.Label>
                 <Form.Control
                 type="text"
@@ -31,7 +53,7 @@ const BookingForm = () => {
               </Form.Group>
             </div>
             <div className="col-6">
-              <Form.Group className="mb-3" contgrolId="lname">
+              <Form.Group className="mb-3" controlId="lname">
                   <Form.Label>Last Name</Form.Label>
                   <Form.Control
                   type="text"
@@ -44,27 +66,55 @@ const BookingForm = () => {
           </div>
           <div className="row">
             <div className="col-6">
-              <FormGroup className="mb-3" controlId="email">
-                <FormLabel>Email</FormLabel>
-                <FormControl 
+              <Form.Group className="mb-3" controlId="email">
+                <Form.Label>Email</Form.Label>
+                <Form.Control 
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)} 
                 placeholder="Email"
                 />
-              </FormGroup>
+              </Form.Group>
             </div>
             <div className="col-6">
-              <FormGroup className="mb-3" controlId="phone">
-                <FormLabel>Phone number</FormLabel>
-                <FormControl
-                  type="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(formatPhoneNumber(e.target.value))}
-                  placeholder="+1 555 555 5555"
-                  title="Please enter a valid phone number with country code (e.g., +1 555 555 5555)"
-                />
-              </FormGroup>
+              <Form.Group className="mb-3" controlId="phone">
+                <Form.Label>Phone number</Form.Label>
+                <div className="input-group phone-input-group">
+                  {/* Visible compact country display (flag + dial code) */}
+                  <div className="phone-country-wrapper">
+                    <div className="phone-country-display">
+                      <FlagImage
+                        iso2={country?.iso2 || 'us'}
+                        className="phone-flag"
+                        size="1.25rem"
+                      />
+                      <span className="phone-dial">+{country?.dialCode || '1'}</span>
+                    </div>
+
+                    {/* Invisible native <select> overlaid on top — opens real browser dropdown (no clipping) */}
+                    <select
+                      className="phone-country-select-hidden"
+                      value={country?.iso2 || 'us'}
+                      onChange={(e) => setCountry(e.target.value)}
+                      aria-label="Country code"
+                    >
+                      {countryOptions.map((c) => (
+                        <option key={c.iso2} value={c.iso2}>
+                          {c.name} (+{c.dialCode})
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <Form.Control
+                    type="tel"
+                    value={inputValue}
+                    onChange={handlePhoneValueChange}
+                    placeholder="Enter phone number"
+                    className="phone-number-input"
+                  />
+                </div>
+              </Form.Group>
             </div>
           </div>
           <div className="row">
